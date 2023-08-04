@@ -1,43 +1,7 @@
-# Dsquared Dapp
+Copyright (c) 2023 BWS Labs AG
 
-## Getting Started
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-First, remove the default suffix from the `.vscode/settings.json` from the `.vscode/settings.json.default` file.
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-Then, in VSCode, open your command palette (`cmd + shift + p` on mac or `ctrl + shift + p` on windows) and search for and navigate to "show recommended extensions". Then, install the recommended extensions.
-
-Then install the project dependencies,
-
-```
-npm install
-
-```
-
-## Development
-
-Run the development server:
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-Code is automatically checked when a commit is made. The commit won't succeed unless checks pass. To run all checks manually,
-
-```bash
-npm run check
-```
-
-## Testing
-
-Cypress is used for component and e2e testing.
-
-To run tests,
-
-```
-npm run test
-npm run test:e2e // e2e tests only
-npm run test:component // component tests only
-```
-# DSQ_dApp
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
