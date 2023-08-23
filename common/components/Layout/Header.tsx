@@ -76,8 +76,8 @@ export const Header = ({
               </Link>
 
               <Link
-                href="/"
-                className="hidden cursor-pointer hover:text-dsqgreen-100"
+                href="/vaults"
+                className="cursor-pointer hover:text-dsqgreen-100"
               >
                 VAULTS
               </Link>

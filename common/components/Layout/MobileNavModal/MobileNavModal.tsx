@@ -14,9 +14,7 @@ export const MobileNavModal = () => {
         </Link>
 
         <Link href="/vaults">
-          <div className="hidden cursor-pointer hover:text-dsqgreen-100">
-            VAULTS
-          </div>
+          <div className="cursor-pointer hover:text-dsqgreen-100">VAULTS</div>
         </Link>
 
         <Link href="/earn">

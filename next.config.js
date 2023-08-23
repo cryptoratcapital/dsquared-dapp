@@ -36,11 +36,6 @@ const nextConfig = {
         destination: "/publicsale",
         permanent: false,
       },
-      {
-        source: "/vaults/:path*", // temporary don't want vault to show till ready & prevent snooping
-        destination: "/",
-        permanent: false,
-      },
     ]
   },
 }
