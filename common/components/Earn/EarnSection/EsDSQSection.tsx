@@ -12,7 +12,7 @@ import { useDisclosure } from "@chakra-ui/react"
 import clsx from "clsx"
 import Link from "next/link"
 import { useState } from "react"
-import { TokenSymbol } from "../../constants/tokenLookup"
+import { TokenSymbol } from "../../constants/TokenLookup"
 import { CustomToolTip } from "../../Generic/Disclaimer/Info/InfoTooltip"
 import { StakingModal } from "./StakingModal"
 import { tooltipText } from "./ToolTipText"
@@ -168,7 +168,6 @@ export const EsDSQSection = () => {
         onClose={onClose}
         stakingVariant={stakingVariant}
         maxAmount={maxUserStake}
-
       />
     </div>
   )

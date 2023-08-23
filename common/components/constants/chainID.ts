@@ -11,3 +11,9 @@ export const ChainID = {
   [ChainNameType.AVALANCHE]: chainIdEnum.AVALANCHE,
   [ChainNameType.GOERLI]: chainIdEnum.GOERLI,
 } as const
+
+export const ChainExplorerBaseURL = {
+  [ChainNameType.ARBITRUM]: "https://arbiscan.io/address/",
+  [ChainNameType.AVALANCHE]: "https://snowtrace.io/address/",
+  [ChainNameType.GOERLI]: "https://goerli.etherscan.io/address/",
+} as const

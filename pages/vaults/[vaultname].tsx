@@ -1,3 +1,4 @@
+import { VaultCurrentState } from "@/common/components/constants/Vaults"
 import { Disclaimer } from "@/common/components/Generic/Disclaimer/Disclaimer"
 import { Layout } from "@/common/components/Layout/Layout"
 import { defaultVaultContextValues } from "@/common/components/Vaults/loadingData"
@@ -8,7 +9,9 @@ import VaultOverview from "@/common/components/Vaults/VaultSpecific/VaultOvervie
 import VaultsExplained from "@/common/components/Vaults/VaultSpecific/VaultsExplained"
 import VaultTitle from "@/common/components/Vaults/VaultSpecific/VaultTitle"
 import { VaultOverviewInterface } from "@/common/interfaces/Vaults"
-import { useVaultOverview } from "@/common/utils/queries"
+import { web3ModalState } from "@/common/store"
+import { useVaultSpecific } from "@/common/utils/queries"
+
 import { useRouter } from "next/router"
 import { createContext } from "react"
 
@@ -17,32 +20,37 @@ export const VaultSpecificContext = createContext(defaultVaultContextValues)
 const Vault = () => {
   const {
     isReady,
-    query: { vaultname, chain },
+    query: { vaultname, chainId },
   } = useRouter()
 
+  const account = web3ModalState((state) => state.account)
+
   const {
-    data: vaultOverviewData,
+    data: allVaultData,
     isLoading: vaultOverviewLoading,
     isError: vaultOverviewError,
-  } = useVaultOverview(isReady)
+  } = useVaultSpecific(isReady, chainId as string, vaultname as string, account)
 
   if (!isReady) return <div></div>
 
-  const allVaultData = vaultOverviewData?.allVaultsOverviewData.filter(
-    ({ vaultName, chainName }) =>
-      vaultName === vaultname && chainName === chain,
-  )[0] as VaultOverviewInterface
-
   const vaultDataLoading = vaultOverviewLoading || vaultOverviewError
-
-  const vaultOpen = allVaultData?.vaultOpen
+  const vaultCurrentState = allVaultData?.vaultCurrentState
+  const vaultOpen =
+    vaultCurrentState === VaultCurrentState.DEPOSITSOPEN ||
+    vaultCurrentState === VaultCurrentState.WITHDRAWALSONLY
 
   return (
     <div>
       <Layout>
         <div className="relative">
-          <VaultSpecificContext.Provider value={allVaultData}>
-            <VaultTitle vaultName={vaultname as string} vaultOpen={vaultOpen} />
+          <VaultSpecificContext.Provider
+            value={allVaultData as VaultOverviewInterface}
+          >
+            <VaultTitle
+              vaultName={vaultname as string}
+              vaultOpen={vaultOpen}
+              vaultDataLoading={vaultDataLoading}
+            />
             {vaultDataLoading ? (
               <div className="pointer-events-none animate-pulse blur-md">
                 <div className="grid grid-cols-2 mt-20 md:grid-cols-10 gap-x-11">

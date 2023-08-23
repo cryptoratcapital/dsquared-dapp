@@ -1,7 +1,7 @@
 import {
   TokenLookUp,
   TokenSymbol,
-} from "@/common/components/constants/tokenLookup"
+} from "@/common/components/constants/TokenLookup"
 import { chainIdEnum, ChainType } from "@/common/interfaces/Chain"
 import { BigNumber } from "ethers"
 import { formatEther, parseEther } from "ethers/lib/utils"

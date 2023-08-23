@@ -3,7 +3,7 @@ import {
   StakingRouter,
   StakingType,
 } from "@/common/components/constants/Staking"
-import { TokenSymbol } from "@/common/components/constants/tokenLookup"
+import { TokenSymbol } from "@/common/components/constants/TokenLookup"
 import { CustomToolTip } from "@/common/components/Generic/Disclaimer/Info/InfoTooltip"
 import {
   ConnectButton,
@@ -298,7 +298,6 @@ export const DSQSection = () => {
             onClose={onClose}
             stakingVariant={stakingVariant}
             maxAmount={maxAmount}
-
           />
         </>
       )}

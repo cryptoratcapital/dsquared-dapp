@@ -1,64 +1,36 @@
 import { VaultOverviewInterface } from "@/common/interfaces/Vaults"
-import { ChainNameType } from "../constants/chainID"
-
-export const loadingVaultsData = [
-  {
-    vaultName: "GM",
-    apy: 22,
-    vaultOpen: true,
-    vaultTime: 1675814400,
-    risk: "High",
-    lastEpoch: 15,
-    vaultLenght: 28,
-    vaultCapacity: 50000,
-    vaultFilled: 20000,
-    vaultPercentageFilled: 40,
-    valutActive: true,
-    chainName: ChainNameType.ARBITRUM,
-  },
-
-  {
-    vaultName: "GLP++",
-    apy: 30,
-    vaultOpen: true,
-    vaultTime: 1675814400,
-    risk: "Moderate",
-    lastEpoch: 20,
-    vaultLenght: 28,
-    vaultCapacity: 100000,
-    vaultFilled: 50000,
-    vaultPercentageFilled: 50,
-    valutActive: true,
-    chainName: ChainNameType.ARBITRUM,
-  },
-
-  {
-    vaultName: "ETH++",
-    apy: 50,
-    vaultOpen: true,
-    vaultTime: 1675814400,
-    risk: "High",
-    lastEpoch: 30,
-    vaultLenght: 28,
-    vaultCapacity: 200000,
-    vaultFilled: 15000,
-    vaultPercentageFilled: 75,
-    valutActive: true,
-    chainName: ChainNameType.ARBITRUM,
-  },
-]
+import { ChainNameType } from "../constants/ChainID"
+import { TokenSymbol } from "../constants/TokenLookup"
+import {
+  VaultCurrentState,
+  VaultFutureState,
+  VaultSymbol,
+} from "../constants/Vaults"
 
 export const defaultVaultContextValues: VaultOverviewInterface = {
-  vaultName: "ETH++",
-  apy: 50,
-  vaultOpen: true,
-  vaultTime: 1675814400,
+  vaultName: VaultSymbol.ETH,
+  vaultAddress: "",
+  vaultDepositToken: TokenSymbol.USDC,
+  vaultDepositTokenAddress: "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8",
   risk: "High",
-  lastEpoch: 30,
-  vaultLenght: 28,
-  vaultCapacity: 200000,
-  vaultFilled: 15000,
-  vaultPercentageFilled: 75,
-  valutActive: true,
   chainName: ChainNameType.ARBITRUM,
+  totalSupply: 15000,
+  maxSupply: 200000,
+  percentFilled: "75",
+  currentEpochArray: [1678161600, 1678262400, 1680768000],
+  redemptionsOnly: false,
+  redemptionsAndFunding: false,
+  vaultCurrentState: VaultCurrentState.COMINGSOON,
+  vaultFutureState: VaultFutureState.COMINGSOON,
+  lockupSeconds: 2505600,
+  deltaSeconds: 2505600,
+  annualisedAPY: 20,
+  lastApy: 15,
+  epochNumber: 1,
+  userShareBalance: "0",
+  depositsAvailable: "0",
+  maxUserDeposit: "0",
+  shareToAssets: "0",
 }
+
+export const loadingVaultsData = Array(4).fill(defaultVaultContextValues)

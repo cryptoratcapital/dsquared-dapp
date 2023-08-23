@@ -1,4 +1,4 @@
-import { ChainID } from "./chainID"
+import { ChainID } from "./ChainID"
 
 export enum TokenSymbol {
   GM = "GM",
@@ -6,6 +6,7 @@ export enum TokenSymbol {
   ETH = "ETH++",
   DSQ = "DSQ",
   ESDSQ = "esDSQ",
+  USDC = "USDC",
 }
 
 export const TokenLookUp = {
@@ -37,6 +38,12 @@ export const TokenLookUp = {
     [ChainID.arbitrum]: "0xF76d53dE08C53B891E291D870e543BF8A0F6D314",
     [ChainID.avalanche]: "",
     [ChainID.goerli]: "0x5a47b789b46D83b8Cfd105bd98482fE9Be34989B",
+  },
+
+  [TokenSymbol.USDC]: {
+    [ChainID.arbitrum]: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+    [ChainID.avalanche]: "0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E",
+    [ChainID.goerli]: "0x07865c6e87b9f70255377e024ace6630c1eaa37f",
   },
 } as const
 

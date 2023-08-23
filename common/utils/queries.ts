@@ -135,13 +135,32 @@ export const useTotalRaised = () => {
   })
 }
 
-export const useVaultOverview = (enabled: boolean) => {
+export const useVaultOverview = (enabled: boolean, address?: string) => {
   return useQuery<{ allVaultsOverviewData: VaultOverviewInterface[] }>({
-    queryKey: ["vaultsOverview"],
+    queryKey: ["vaultsOverview", address],
     queryFn: async () => {
       const data = await fetcher<{
         allVaultsOverviewData: VaultOverviewInterface[]
-      }>(`/api/vaults/vaultsoverview`)
+      }>(`/api/vaults/vaultsoverview?address=${address}`)
+      return data
+    },
+    staleTime: staleTime,
+    enabled: enabled,
+  })
+}
+
+export const useVaultSpecific = (
+  enabled: boolean,
+  chainId: string,
+  vaultName: string,
+  address?: string,
+) => {
+  return useQuery<VaultOverviewInterface>({
+    queryKey: ["vaultsOverview", address, chainId, vaultName],
+    queryFn: async () => {
+      const data = await fetcher<VaultOverviewInterface>(
+        `/api/vaults/vaultspecific?address=${address}&chainId=${chainId}&vaultName=${vaultName}`,
+      )
       return data
     },
     staleTime: staleTime,

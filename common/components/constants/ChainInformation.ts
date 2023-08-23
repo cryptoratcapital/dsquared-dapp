@@ -1,5 +1,5 @@
 import { ChainType } from "@/common/interfaces/Chain"
-import { ChainID, ChainNameType } from "./chainID"
+import { ChainID, ChainNameType } from "./ChainID"
 
 export const chainIDs: ChainType[] = [
   {

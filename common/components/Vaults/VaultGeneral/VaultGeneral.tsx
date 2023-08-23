@@ -1,13 +1,15 @@
+import { web3ModalState } from "@/common/store"
 import { useVaultOverview } from "@/common/utils/queries"
 import { loadingVaultsData } from "../loadingData"
 import VaultGeneralSingle from "./VaultGeneralSingle"
 
 const VaultGeneral = () => {
+  const account = web3ModalState((state) => state.account)
   const {
     data: vaultOverviewData,
     isLoading: vaultOverviewLoading,
     isError: vaultOverviewError,
-  } = useVaultOverview(true)
+  } = useVaultOverview(true, account)
 
   const vaultDataLoading = vaultOverviewLoading || vaultOverviewError
 
@@ -22,12 +24,11 @@ const VaultGeneral = () => {
       <div className="grid items-center grid-cols-1 mt-8 md:grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-20 place-items-center">
         {vaultDataLoading
           ? loadingVaultsData.map((vaultData, index) => (
-              <div
+              <VaultGeneralSingle
                 key={index}
-                className="pointer-events-none animate-pulse blur-md"
-              >
-                <VaultGeneralSingle {...vaultData} />
-              </div>
+                {...vaultData}
+                className={"blur-md animate-pulse"}
+              />
             ))
           : vaultOverviewData?.allVaultsOverviewData.map((vaultData, index) => (
               <VaultGeneralSingle key={index} {...vaultData} />

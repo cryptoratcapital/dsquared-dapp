@@ -1,5 +1,5 @@
 import { chainIdEnum } from "@/common/interfaces/Chain"
-import { TokenSymbol } from "./tokenLookup"
+import { TokenSymbol } from "./TokenLookup"
 
 export enum StakingType {
   DSQStake = "DSQStake",
