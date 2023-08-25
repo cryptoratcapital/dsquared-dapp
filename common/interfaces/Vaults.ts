@@ -2,9 +2,9 @@ import {
   VaultCurrentState,
   VaultFutureState,
   VaultSymbol,
-} from "../components//constants/Vaults"
-import { ChainNameType } from "../components/constants/ChainID"
-import { TokenSymbol } from "../components/constants/TokenLookup"
+} from "@/common/constants/Vaults"
+import { ChainNameType } from "../constants/ChainID"
+import { TokenSymbol } from "../constants/TokenLookup"
 
 export interface VaultInitialInterface {
   vaultName: VaultSymbol

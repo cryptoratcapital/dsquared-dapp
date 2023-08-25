@@ -1,7 +1,4 @@
-import {
-  arbitrumVaults,
-  goerliVaults,
-} from "@/common/components/constants/Vaults"
+import { arbitrumVaults, goerliVaults } from "@/common/constants/Vaults"
 import { chainIdEnum } from "@/common/interfaces/Chain"
 import { getProvider } from "@/common/utils/api/providers"
 import { getVaultInfo } from "@/common/utils/api/vaults/generalVaults"

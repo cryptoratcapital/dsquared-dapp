@@ -1,4 +1,4 @@
-import { PublicSale } from "@/common/components/constants/Publicsale"
+import { PublicSale } from "@/common/constants/Publicsale"
 import { getProvider } from "@/common/utils/api/providers"
 import { getPublicSale } from "@/common/utils/api/publicSale"
 import { getStage4Sale } from "@/common/utils/api/stage4"

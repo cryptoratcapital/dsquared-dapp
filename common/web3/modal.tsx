@@ -1,4 +1,4 @@
-import { chainIDs } from "@/common/components/constants/ChainInformation"
+import { chainIDs } from "@/common/constants/ChainInformation"
 import { web3ModalState } from "@/common/store/web3ModalState"
 import { sentry } from "@/common/utils/sentry"
 import { Web3Provider } from "@ethersproject/providers"

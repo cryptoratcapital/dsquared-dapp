@@ -1,8 +1,5 @@
-import {
-  TokenLookUp,
-  TokenSymbol,
-} from "@/common/components/constants/TokenLookup"
-import { VaultSymbol } from "@/common/components/constants/Vaults"
+import { TokenLookUp, TokenSymbol } from "@/common/constants/TokenLookup"
+import { VaultSymbol } from "@/common/constants/Vaults"
 import { chainIdEnum } from "@/common/interfaces/Chain"
 import { isAddress } from "ethers/lib/utils"
 
@@ -36,6 +33,18 @@ export function isValidTokenName(
   return true
 }
 
+export function isValidVaultName(
+  vaultName: string | string[] | undefined,
+): vaultName is VaultSymbol {
+  if (
+    typeof vaultName !== "string" ||
+    !Object.values(VaultSymbol).includes(vaultName as VaultSymbol)
+  ) {
+    return false
+  }
+  return true
+}
+
 export function isValidChain(
   chainId: string | string[] | undefined,
   tokenName?: string | string[] | undefined,
@@ -55,17 +64,5 @@ export function isValidChain(
     return false
   }
 
-  return true
-}
-
-export function isValidVaultName(
-  vaultName: string | string[] | undefined,
-): vaultName is VaultSymbol {
-  if (
-    typeof vaultName !== "string" ||
-    !Object.values(VaultSymbol).includes(vaultName as VaultSymbol)
-  ) {
-    return false
-  }
   return true
 }

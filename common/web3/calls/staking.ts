@@ -1,8 +1,5 @@
 import { Router__factory } from "@/common/abi/typechain"
-import {
-  StakingRouter,
-  StakingType,
-} from "@/common/components/constants/Staking"
+import { StakingRouter, StakingType } from "@/common/constants/Staking"
 import { web3ModalState } from "@/common/store"
 import { sentry } from "@/common/utils/sentry"
 import { parseEther } from "ethers/lib/utils"

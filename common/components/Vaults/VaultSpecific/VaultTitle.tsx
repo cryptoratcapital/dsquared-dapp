@@ -30,7 +30,7 @@ const VaultTitle = ({
   return (
     <div className="flex justify-start sm:justify-between gap-x-12">
       <Link href={"/vaults/"}>
-        <div className="flex cursor-pointer gap-x-4 items-center">
+        <div className="flex items-start cursor-pointer gap-x-4">
           <Image
             src="/logos/backPolygon.svg"
             alt="backpolygon"

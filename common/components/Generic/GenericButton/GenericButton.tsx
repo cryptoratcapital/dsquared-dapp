@@ -20,7 +20,6 @@ interface GenericButtonProps {
   onClick?: () => void
   leftIcon?: React.ReactNode
   loading?: boolean
-  id?: string
 }
 
 export const GenericButton = ({
@@ -32,18 +31,16 @@ export const GenericButton = ({
   onClick,
   leftIcon,
   loading,
-  ...props
 }: GenericButtonProps) => {
   return (
     <button
-      {...props}
       autoFocus={autoFocus}
       onClick={onClick}
       className={clsx(
         className,
         "py-3 text-lg text-center border-2 px-auto border-dsqgreen-100 font-roboto-mono",
         variant === "disabled"
-          ? "text-dsqgray-100 hover:bg-dsqgray-200"
+          ? "text-dsqgray-100"
           : variant === "solid-disabled"
           ? "text-dsqgray-200"
           : variant === "outline"
@@ -74,7 +71,7 @@ export const GenericButton = ({
           ? variant === "solid"
             ? "hover:bg-dsqgreen-50"
             : variant === "disabled"
-            ? "hover:bg-dsqgray-200"
+            ? "hover:bg-none text-dsqgray-100 hover:text-dsqgray-100"
             : "hover:bg-dsqgreen-100"
           : "",
         touchable ? "cursor-pointer" : "pointer-events-none",
@@ -121,7 +118,6 @@ export const ConnectButton: FC<{ className?: string }> = ({
         onConfirm={onConfirm}
       />
       <GenericButton
-        data-testid="connect-wallet"
         variant="outline"
         text={
           account

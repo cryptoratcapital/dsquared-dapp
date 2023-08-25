@@ -6,14 +6,9 @@ import clsx from "clsx"
 import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
-import { ChainExplorerBaseURL, ChainID } from "../../constants/ChainID"
-import { VaultCurrentState, VaultFutureState } from "../../constants/Vaults"
-
-export const vaultIconText = [
-  "The exposure of your capital to loss based on our assessment relative to other D-Squared vaults.",
-  "Performance gain or loss of most recent completed epoch in this vault",
-  "Length of time funds are locked in the vault between beginning and ending of the next epoch.",
-]
+import { ChainExplorerBaseURL, ChainID } from "../../../constants/ChainID"
+import { VaultCurrentState, VaultFutureState } from "../../../constants/Vaults"
+import { vaultIconText } from "./vaultText"
 
 export const CustomTooltip = ({ text }: { text: string }) => {
   const [iconHovering, setIconHovered] = useState(false)
@@ -22,8 +17,6 @@ export const CustomTooltip = ({ text }: { text: string }) => {
   const isMobile = useBreakpointValue({ base: true, sm: false })
 
   return (
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
     <Tooltip
       label={text}
       fontWeight="semibold"

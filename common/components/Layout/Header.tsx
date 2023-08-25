@@ -62,10 +62,11 @@ export const Header = ({
         {!hideNavigation && (
           <>
             <nav className="hidden text-lg font-semibold md:flex gap-x-14 font-roboto-mono">
-              <Link href="/earn/">
-                <div className="cursor-pointer hover:text-dsqgreen-100">
-                  HOME
-                </div>
+              <Link
+                href="/earn"
+                className="cursor-pointer hover:text-dsqgreen-100"
+              >
+                EARN
               </Link>
 
               <Link
@@ -76,17 +77,10 @@ export const Header = ({
               </Link>
 
               <Link
-                href="/vaults"
+                href="/vaults/"
                 className="cursor-pointer hover:text-dsqgreen-100"
               >
                 VAULTS
-              </Link>
-
-              <Link
-                href="/earn"
-                className="cursor-pointer hover:text-dsqgreen-100"
-              >
-                EARN
               </Link>
             </nav>
 

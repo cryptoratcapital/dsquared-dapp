@@ -1,4 +1,3 @@
-import { VaultCurrentState } from "@/common/components/constants/Vaults"
 import { Disclaimer } from "@/common/components/Generic/Disclaimer/Disclaimer"
 import { Layout } from "@/common/components/Layout/Layout"
 import { defaultVaultContextValues } from "@/common/components/Vaults/loadingData"
@@ -8,6 +7,7 @@ import VaultInteractive from "@/common/components/Vaults/VaultSpecific/VaultInte
 import VaultOverview from "@/common/components/Vaults/VaultSpecific/VaultOverview"
 import VaultsExplained from "@/common/components/Vaults/VaultSpecific/VaultsExplained"
 import VaultTitle from "@/common/components/Vaults/VaultSpecific/VaultTitle"
+import { VaultCurrentState } from "@/common/constants/Vaults"
 import { VaultOverviewInterface } from "@/common/interfaces/Vaults"
 import { web3ModalState } from "@/common/store"
 import { useVaultSpecific } from "@/common/utils/queries"

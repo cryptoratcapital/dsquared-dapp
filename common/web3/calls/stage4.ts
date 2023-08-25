@@ -1,5 +1,5 @@
 import { Stage4__factory } from "@/common/abi/typechain"
-import { Stage4Sale } from "@/common/components/constants/Publicsale"
+import { Stage4Sale } from "@/common/constants/Publicsale"
 import { web3ModalState } from "@/common/store"
 import { sentry } from "@/common/utils/sentry"
 import { parseEther } from "ethers/lib/utils"

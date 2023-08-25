@@ -1,12 +1,11 @@
-import {
-  CustomTooltip,
-  vaultIconText,
-} from "@/common/components/Vaults/VaultGeneral/VaultGeneralSingle"
+import { CustomTooltip } from "@/common/components/Vaults/VaultGeneral/VaultGeneralSingle"
+// import { timeExtraction } from "@/common/utils/helpers/utils"
 import { timeExtraction } from "@/common/utils/helpers/utils"
 import { VaultSpecificContext } from "@/pages/vaults/[vaultname]"
 import { useBreakpointValue } from "@chakra-ui/react"
 import Image from "next/image"
 import { useContext } from "react"
+import { vaultIconText } from "../VaultGeneral/vaultText"
 
 const InfoBox = ({
   title,
@@ -50,14 +49,14 @@ const VaultInfo = () => {
   const { daysLeft } = timeExtraction(lockupSeconds)
 
   return (
-    <div className="lg:col-span-6 border-[0.5px] border-dsqgreen-100 p-3 md:p-7 hover:bg-none">
+    <div className="lg:col-span-6 border-[0.5px] border-dsqgreen-100 p-7 hover:bg-none">
       <div className="flex justify-between">
         <div className="flex flex-col text-left gap-y-1">
           <p className="text-lg font-light text-dsqgray-100 md:text-white">
             USDC
           </p>
-          <div className="flex flex-col md:flex-row  gap-x-4">
-            <p className="text-3xl sm:text-5xl font-bold md:text-6xl">
+          <div className="flex gap-x-4">
+            <p className="text-5xl font-bold md:text-6xl">
               {vaultName.replace("Plus", "++")}
             </p>
             <Image
@@ -69,7 +68,7 @@ const VaultInfo = () => {
           </div>
         </div>
 
-        <div className="flex justify-between text-lg font-light gap-x-4 md:gap-x-24 text-dsqgray-100 md:text-white md:ml-10">
+        <div className="flex justify-between text-lg font-light gap-x-4 md:gap-x-24 text-dsqgray-100 md:text-white">
           <p>Auto Rolling</p>
           <p>Epoch {epochNumber} </p>
         </div>

@@ -2,7 +2,7 @@ import { Erc20__factory } from "@/common/abi/typechain"
 import { sentry } from "@/common/utils/sentry"
 import { BaseProvider } from "@ethersproject/providers"
 import { BigNumber } from "ethers"
-import { formatEther, parseUnits } from "ethers/lib/utils"
+import { formatEther, formatUnits, parseUnits } from "ethers/lib/utils"
 
 // (2^256 - 1 )
 const maxAmount = BigNumber.from(2).pow(256).sub(BigNumber.from(1))
@@ -16,6 +16,7 @@ export const getEthBalance = async (
     const balance = await provider.getBalance(address)
     return formatEther(balance)
   } catch (err: unknown) {
+    console.log(err)
     sentry.captureException(err)
     return "0"
   }
@@ -29,7 +30,8 @@ export const getTokenBalance = async (
   try {
     const ERC20Contract = Erc20__factory.connect(tokenAddress, provider)
     const balance = await ERC20Contract.balanceOf(accountAddress)
-    return formatEther(balance)
+    const decimals = await ERC20Contract.decimals()
+    return formatUnits(balance, decimals)
   } catch (err: unknown) {
     sentry.captureException(err)
     return "0"
@@ -64,9 +66,11 @@ export const spenderApproved = async (
       ownerAddress,
       spenderAddress,
     )
+
+    const decimals = await ERC20Contract.decimals()
     const maxAllowanceApproved = spenderAllowance.eq(maxAmount)
     const customAllowanceApproved = spenderAllowance.gte(
-      parseUnits(tokenAmount),
+      parseUnits(tokenAmount, decimals),
     )
 
     return { maxAllowanceApproved, customAllowanceApproved }

@@ -1,5 +1,5 @@
 import { TokenSale__factory } from "@/common/abi/typechain"
-import { PublicSale } from "@/common/components/constants/Publicsale"
+import { PublicSale } from "@/common/constants/Publicsale"
 import { PublicsaleInterface } from "@/common/interfaces/PublicSaleInterface"
 import { BaseProvider } from "@ethersproject/providers"
 import { formatEther, isAddress } from "ethers/lib/utils"

@@ -1,5 +1,5 @@
 import { Stage4__factory } from "@/common/abi/typechain"
-import { Stage4Sale } from "@/common/components/constants/Publicsale"
+import { Stage4Sale } from "@/common/constants/Publicsale"
 
 import { Stage4SaleInterface } from "@/common/interfaces/PublicSaleInterface"
 import { BaseProvider } from "@ethersproject/providers"

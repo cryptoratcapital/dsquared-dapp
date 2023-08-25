@@ -1,10 +1,8 @@
 import { Erc20__factory } from "@/common/abi/typechain"
 import { VaultV0__factory } from "@/common/abi/typechain/factories/VaultV0__factory"
+
 import { VaultV0 } from "@/common/abi/typechain/VaultV0"
-import {
-  VaultCurrentState,
-  VaultFutureState,
-} from "@/common/components/constants/Vaults"
+import { VaultCurrentState, VaultFutureState } from "@/common/constants/Vaults"
 import {
   VaultInitialInterface,
   VaultOverviewInterface,

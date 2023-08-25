@@ -1,10 +1,10 @@
-import { chainIDs } from "@/common/components/constants/ChainInformation"
+import { GenericButton } from "@/common/components/Generic/GenericButton/GenericButton"
+import { chainIDs } from "@/common/constants/ChainInformation"
 import {
   StakingList,
   StakingRouter,
   StakingType,
-} from "@/common/components/constants/Staking"
-import { GenericButton } from "@/common/components/Generic/GenericButton/GenericButton"
+} from "@/common/constants/Staking"
 import { web3ModalState } from "@/common/store"
 import { isCorrectChainId } from "@/common/utils/helpers/utils"
 import {
@@ -173,7 +173,6 @@ export const StakingModal = ({
 
                     <div className="md:min-w-[250px]">
                       <Input
-                        data-testid="stake-amount"
                         variant="unstyled"
                         value={inputVal}
                         size="lg"
@@ -228,7 +227,6 @@ export const StakingModal = ({
                   />
                 ) : (
                   <GenericButton
-                    data-testid="stake-submit"
                     loading={approvalPending}
                     text={"Approve"}
                     leftIcon={<TransactionSpinner />}

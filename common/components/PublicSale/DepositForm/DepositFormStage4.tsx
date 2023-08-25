@@ -1,10 +1,10 @@
-import { Stage4Sale } from "@/common/components/constants/Publicsale"
-import { stage4WLAddresses } from "@/common/components/constants/Stage4Wl/whitelistedAddress"
 import {
   ConnectButton,
   GenericButton,
 } from "@/common/components/Generic/GenericButton/GenericButton"
 import Grid from "@/common/components/Generic/Grid/Grid"
+import { Stage4Sale } from "@/common/constants/Publicsale"
+import { stage4WLAddresses } from "@/common/constants/Stage4Wl/whitelistedAddress"
 import { web3ModalState } from "@/common/store"
 import { getMaxBalance, isCorrectChainId } from "@/common/utils/helpers/utils"
 import { useNativeBalance, useStage4Data } from "@/common/utils/queries"
@@ -21,7 +21,7 @@ import keccak256 from "keccak256"
 import { MerkleTree } from "merkletreejs"
 import Image from "next/image"
 import React, { useEffect, useState } from "react"
-import { chainIDs } from "../../constants/ChainInformation"
+import { chainIDs } from "../../../constants/ChainInformation"
 
 const leaves = stage4WLAddresses.map((addr) => keccak256(addr))
 const merkleTree = new MerkleTree(leaves, keccak256, { sortPairs: true })

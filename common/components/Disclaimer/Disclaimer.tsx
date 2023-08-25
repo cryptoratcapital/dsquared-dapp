@@ -128,7 +128,6 @@ const Discalimer = ({ isOpen, onClose }: DisclaimerProps) => {
 
           <div className="flex items-center mt-6 mb-4">
             <div
-              data-testid="accept-terms"
               onClick={() => setUserAgreed(!userAgreed)}
               className={clsx(
                 "w-5 h-5 border border-4px cursor-pointer flex justify-center",
@@ -138,14 +137,13 @@ const Discalimer = ({ isOpen, onClose }: DisclaimerProps) => {
               )}
             ></div>
             <label className="ml-2 font-medium text-gray-900 md:text-lg dark:text-gray-300">
-              I agree to the terms and conditions
+              <p>I agree to the terms and conditions</p>
             </label>
           </div>
         </ModalBody>
 
         <ModalFooter flex={"row"} justifyContent="start">
           <GenericButton
-            data-testid="confirm-terms"
             text="Confirm"
             variant={userAgreed ? "solid" : "solid-disabled"}
             className="w-[200px] mx-auto md:mx-0"

@@ -5,8 +5,8 @@ import {
 import {
   DSQStakingContract,
   esDSQStakingContract,
-} from "@/common/components/constants/Staking"
-import { YEAR_SECONDS } from "@/common/components/constants/time"
+} from "@/common/constants/Staking"
+import { YEAR_SECONDS } from "@/common/constants/Time"
 import { StakingDataUser } from "@/common/interfaces/Staking"
 import { BaseProvider } from "@ethersproject/providers"
 import { BigNumber } from "ethers"

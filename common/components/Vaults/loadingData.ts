@@ -1,11 +1,11 @@
+import { TokenSymbol } from "@/common/constants/TokenLookup"
 import { VaultOverviewInterface } from "@/common/interfaces/Vaults"
-import { ChainNameType } from "../constants/ChainID"
-import { TokenSymbol } from "../constants/TokenLookup"
+import { ChainNameType } from "../../constants/ChainID"
 import {
   VaultCurrentState,
   VaultFutureState,
   VaultSymbol,
-} from "../constants/Vaults"
+} from "../../constants/Vaults"
 
 export const defaultVaultContextValues: VaultOverviewInterface = {
   vaultName: VaultSymbol.ETH,

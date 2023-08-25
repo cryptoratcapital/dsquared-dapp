@@ -2,7 +2,7 @@ import { StakingRouter } from "@/common/components/constants/Staking"
 import {
   TokenLookUp,
   TokenSymbol,
-} from "@/common/components/constants/tokenLookup"
+} from "@/common/components/constants/TokenLookup"
 import { chainIdEnum } from "@/common/interfaces/Chain"
 import { isValidAddress } from "@/common/utils/helpers/checkers"
 import { type Page } from "@playwright/test"

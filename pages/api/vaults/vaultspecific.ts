@@ -1,4 +1,4 @@
-import { VaultConstantData } from "@/common/components/constants/Vaults"
+import { VaultConstantData } from "@/common/constants/Vaults"
 import { getProvider } from "@/common/utils/api/providers"
 import { getVaultInfo } from "@/common/utils/api/vaults/generalVaults"
 import {

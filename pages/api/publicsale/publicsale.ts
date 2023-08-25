@@ -1,4 +1,4 @@
-import { PublicSale } from "@/common/components/constants/Publicsale"
+import { PublicSale } from "@/common/constants/Publicsale"
 import { getProvider } from "@/common/utils/api/providers"
 import { getPublicSale } from "@/common/utils/api/publicSale"
 import { isValidAddress } from "@/common/utils/helpers/checkers"

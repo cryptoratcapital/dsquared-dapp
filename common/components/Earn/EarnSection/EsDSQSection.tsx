@@ -1,9 +1,6 @@
-import { chainIDs } from "@/common/components/constants/ChainInformation"
-import {
-  StakingRouter,
-  StakingType,
-} from "@/common/components/constants/Staking"
 import { GenericButton } from "@/common/components/Generic/GenericButton/GenericButton"
+import { chainIDs } from "@/common/constants/ChainInformation"
+import { StakingRouter, StakingType } from "@/common/constants/Staking"
 import { web3ModalState } from "@/common/store"
 import { numberFormat } from "@/common/utils/helpers/numbers"
 import { isCorrectChainId, timeExtraction } from "@/common/utils/helpers/utils"
@@ -12,7 +9,7 @@ import { useDisclosure } from "@chakra-ui/react"
 import clsx from "clsx"
 import Link from "next/link"
 import { useState } from "react"
-import { TokenSymbol } from "../../constants/TokenLookup"
+import { TokenSymbol } from "../../../constants/TokenLookup"
 import { CustomToolTip } from "../../Generic/Disclaimer/Info/InfoTooltip"
 import { StakingModal } from "./StakingModal"
 import { tooltipText } from "./ToolTipText"

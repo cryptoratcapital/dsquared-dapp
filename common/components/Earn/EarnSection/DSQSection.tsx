@@ -1,15 +1,12 @@
-import { chainIDs } from "@/common/components/constants/ChainInformation"
-import {
-  StakingRouter,
-  StakingType,
-} from "@/common/components/constants/Staking"
-import { TokenSymbol } from "@/common/components/constants/TokenLookup"
 import { CustomToolTip } from "@/common/components/Generic/Disclaimer/Info/InfoTooltip"
 import {
   ConnectButton,
   GenericButton,
 } from "@/common/components/Generic/GenericButton/GenericButton"
 import { TransactionSpinner } from "@/common/components/Icons/customIcons"
+import { chainIDs } from "@/common/constants/ChainInformation"
+import { StakingRouter, StakingType } from "@/common/constants/Staking"
+import { TokenSymbol } from "@/common/constants/TokenLookup"
 import { web3ModalState } from "@/common/store"
 import { numberFormat } from "@/common/utils/helpers/numbers"
 import { isCorrectChainId } from "@/common/utils/helpers/utils"
@@ -190,7 +187,6 @@ export const DSQSection = () => {
 
                 <div className="flex flex-col justify-between mt-5 md:mt-0 gap-y-5">
                   <GenericButton
-                    data-testid="stake-dsq"
                     text="Stake DSQ"
                     variant="outline"
                     touchable

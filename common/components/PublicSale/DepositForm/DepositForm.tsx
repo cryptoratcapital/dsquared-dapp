@@ -1,9 +1,9 @@
-import { PublicSale } from "@/common/components/constants/Publicsale"
 import {
   ConnectButton,
   GenericButton,
 } from "@/common/components/Generic/GenericButton/GenericButton"
 import Grid from "@/common/components/Generic/Grid/Grid"
+import { PublicSale } from "@/common/constants/Publicsale"
 import { web3ModalState } from "@/common/store"
 import { getMaxBalance, isCorrectChainId } from "@/common/utils/helpers/utils"
 import { useNativeBalance, usePublicSaleData } from "@/common/utils/queries"
@@ -16,7 +16,7 @@ import { Input } from "@chakra-ui/react"
 import clsx from "clsx"
 import Image from "next/image"
 import React, { useEffect, useState } from "react"
-import { chainIDs } from "../../constants/ChainInformation"
+import { chainIDs } from "../../../constants/ChainInformation"
 
 export const DepositForm = () => {
   const account = web3ModalState((state) => state.account)
