@@ -1,8 +1,5 @@
-import { StakingRouter } from "@/common/components/constants/Staking"
-import {
-  TokenLookUp,
-  TokenSymbol,
-} from "@/common/components/constants/TokenLookup"
+import { StakingRouter } from "@/common/constants/Staking"
+import { TokenLookUp, TokenSymbol } from "@/common/constants/TokenLookup"
 import { chainIdEnum } from "@/common/interfaces/Chain"
 import { isValidAddress } from "@/common/utils/helpers/checkers"
 import { type Page } from "@playwright/test"
