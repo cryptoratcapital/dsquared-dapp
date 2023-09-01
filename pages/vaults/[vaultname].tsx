@@ -33,6 +33,8 @@ const Vault = () => {
 
   if (!isReady) return <div></div>
 
+  console.log(allVaultData)
+
   const vaultDataLoading = vaultOverviewLoading || vaultOverviewError
   const vaultCurrentState = allVaultData?.vaultCurrentState
   const vaultOpen =

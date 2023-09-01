@@ -134,7 +134,7 @@ export const VaultConstantData = {
 
     [ChainID.goerli]: {
       vaultName: VaultSymbol.USDC,
-      vaultAddress: "",
+      vaultAddress: "0x645b2837949ab9E38D9F0Df107C3B964b473C207",
       vaultDepositToken: TokenSymbol.USDC,
       vaultDepositTokenAddress: TokenLookUp.USDC[ChainID.goerli],
       risk: "High",
@@ -147,9 +147,12 @@ export const arbitrumVaults = [
   VaultConstantData[VaultSymbol.GLP][ChainID.arbitrum],
   VaultConstantData[VaultSymbol.ETH][ChainID.arbitrum],
   VaultConstantData[VaultSymbol.ARB][ChainID.arbitrum],
-  VaultConstantData[VaultSymbol.USDC][ChainID.arbitrum],
+  // VaultConstantData[VaultSymbol.USDC][ChainID.arbitrum],
 ]
 export const avalancheVaults = [
   VaultConstantData[VaultSymbol.GLP][ChainID.avalanche],
 ]
-export const goerliVaults = [VaultConstantData[VaultSymbol.GLP][ChainID.goerli]]
+export const goerliVaults = [
+  // VaultConstantData[VaultSymbol.GLP][ChainID.goerli],
+  VaultConstantData[VaultSymbol.USDC][ChainID.goerli],
+]

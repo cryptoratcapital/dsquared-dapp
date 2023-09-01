@@ -22,7 +22,7 @@ export const TokenLookUp = {
   [TokenSymbol.USDC]: {
     [ChainID.arbitrum]: "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8",
     [ChainID.avalanche]: "0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E",
-    [ChainID.goerli]: "0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6",
+    [ChainID.goerli]: "0x07865c6E87B9F70255377e024ace6630C1Eaa37F",
   },
 } as const
 

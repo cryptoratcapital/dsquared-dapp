@@ -37,9 +37,11 @@ const vaultsOverview = async (req: NextApiRequest, res: NextApiResponse) => {
         return getVaultInfo(item, goerliProvider, address)
       }),
     )
-    const allVaultsOverviewData = arbitrumVaultsData
+    let allVaultsOverviewData = arbitrumVaultsData
       // .concat(avalancheVaultsData)
       .concat(goerliVaultsData)
+
+    allVaultsOverviewData = goerliVaultsData
 
     // const delay = (ms: number) => new Promise((res) => setTimeout(res, ms))
     // await delay(1000)
