@@ -32,6 +32,7 @@ const vaultsOverview = async (req: NextApiRequest, res: NextApiResponse) => {
     //     return getVaultInfo(item, avalancheProvider, address)
     //   }),
     // )
+
     const goerliVaultsData = await Promise.all(
       goerliVaults.map((item) => {
         return getVaultInfo(item, goerliProvider, address)
