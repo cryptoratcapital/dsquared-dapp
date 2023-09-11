@@ -46,7 +46,7 @@ const vaultsOverview = async (req: NextApiRequest, res: NextApiResponse) => {
 
     // const delay = (ms: number) => new Promise((res) => setTimeout(res, ms))
     // await delay(1000)
-    console.log(`finished`)
+    // console.log(`finished`)
 
     res.json({ allVaultsOverviewData })
   } catch (err: unknown) {
