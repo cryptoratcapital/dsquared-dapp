@@ -75,9 +75,9 @@ export const VaultConstantData = {
 
     [ChainID.goerli]: {
       vaultName: VaultSymbol.ETH,
-      vaultAddress: "",
+      vaultAddress: "0x9b52e8a8919ebfb92fb30a23440d7283e3a61c07",
       vaultDepositToken: TokenSymbol.USDC,
-      vaultDepositTokenAddress: "0x9b52e8a8919ebfb92fb30a23440d7283e3a61c07",
+      vaultDepositTokenAddress: TokenLookUp.USDC[ChainID.goerli],
       risk: "High",
       chainName: ChainNameType.GOERLI,
     },
@@ -105,9 +105,9 @@ export const VaultConstantData = {
 
     [ChainID.goerli]: {
       vaultName: VaultSymbol.ARB,
-      vaultAddress: "",
+      vaultAddress: "0x95eb96e1e248f0d874f8578f78bbd7cc3afdc854",
       vaultDepositToken: TokenSymbol.USDC,
-      vaultDepositTokenAddress: "0x95eb96e1e248f0d874f8578f78bbd7cc3afdc854",
+      vaultDepositTokenAddress: TokenLookUp.USDC[ChainID.goerli],
       risk: "High",
       chainName: ChainNameType.GOERLI,
     },
