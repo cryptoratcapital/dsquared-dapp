@@ -179,6 +179,8 @@ const VaultDeposit = () => {
     )
   }
 
+  console.log(`in VaultDeposit func at time ${Date.now()}`)
+
   return (
     <div className="lg:col-span-4 border-[0.5px] border-dsqgreen-100 p-8 flex flex-col">
       <div className="flex justify-start text-lg font-light gap-x-6">
